@@ -86,6 +86,7 @@ This repository includes a GitHub Actions workflow at `.github/workflows/deploy-
 1. Push this repository to GitHub.
 2. In repository settings, open **Pages**.
 3. Under **Build and deployment**, choose **Source: GitHub Actions**.
+4. Ensure your default branch is `main` (this workflow deploys on pushes to `main`).
 4. Ensure your default branch is `main` (or update the workflow branch trigger).
 
 ### Trigger deployment
