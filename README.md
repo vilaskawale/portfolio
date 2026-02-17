@@ -76,3 +76,27 @@ Then open:
 
 - `assets/scss/style.scss` is the SCSS source.
 - `assets/css/style.css` is the compiled stylesheet currently referenced by `index.html`.
+
+## Deploy to GitHub Pages
+
+This repository includes a GitHub Actions workflow at `.github/workflows/deploy-pages.yml`.
+
+### One-time setup in GitHub
+
+1. Push this repository to GitHub.
+2. In repository settings, open **Pages**.
+3. Under **Build and deployment**, choose **Source: GitHub Actions**.
+4. Ensure your default branch is `main` (or update the workflow branch trigger).
+
+### Trigger deployment
+
+- Push to `main`, or
+- Run the workflow manually from **Actions → Deploy static portfolio to GitHub Pages**.
+
+After workflow success, your live URL will be:
+
+- `https://<your-github-username>.github.io/<repository-name>/`
+
+If you use a user/organization site repository named `<your-github-username>.github.io`, then URL will be:
+
+- `https://<your-github-username>.github.io/`
