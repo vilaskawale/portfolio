@@ -140,6 +140,13 @@
 
   const navLinks = document.querySelectorAll('.navbar .nav-link');
   const navCollapse = document.getElementById('navbarNav');
+  if (yearElement) {
+    yearElement.textContent = new Date().getFullYear();
+  }
+
+  const navLinks = document.querySelectorAll('.navbar .nav-link');
+  const navCollapse = document.getElementById('navbarNav');
+
   navLinks.forEach((link) => {
     link.addEventListener('click', () => {
       if (navCollapse && navCollapse.classList.contains('show')) {

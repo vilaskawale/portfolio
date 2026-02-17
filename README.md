@@ -87,6 +87,7 @@ This repository includes a GitHub Actions workflow at `.github/workflows/deploy-
 2. In repository settings, open **Pages**.
 3. Under **Build and deployment**, choose **Source: GitHub Actions**.
 4. Ensure your default branch is `main` (this workflow deploys on pushes to `main`).
+4. Ensure your default branch is `main` (or update the workflow branch trigger).
 
 ### Trigger deployment
 
@@ -100,39 +101,3 @@ After workflow success, your live URL will be:
 If you use a user/organization site repository named `<your-github-username>.github.io`, then URL will be:
 
 - `https://<your-github-username>.github.io/`
-
-
-## GitHub Pages not deploying? (Common fixes)
-
-If deployment is not happening, check these in order:
-
-1. **Branch trigger mismatch**
-   - This workflow deploys on push to `main`.
-   - If you push to any other branch, deployment will not auto-run.
-
-2. **Pages source must be GitHub Actions**
-   - Go to **Settings → Pages → Build and deployment**.
-   - Set **Source** to **GitHub Actions**.
-
-3. **Actions permissions**
-   - Go to **Settings → Actions → General → Workflow permissions**.
-   - Select **Read and write permissions**.
-   - Save.
-
-4. **Actions policy**
-   - In **Settings → Actions → General**, ensure Actions are allowed (for example, allow all actions or at least GitHub-owned actions).
-
-5. **Repository visibility and Pages availability**
-   - For free plans, user/org Pages from public repos always works.
-   - Private repo Pages may require a plan that supports private Pages.
-
-6. **First run approval / environment checks**
-   - Open **Actions** tab and check the workflow run logs.
-   - If the `github-pages` environment requires approval, approve it.
-
-7. **Workflow file path**
-   - Ensure the file exists exactly at `.github/workflows/deploy-pages.yml` on the branch being pushed.
-
-8. **Expected URL**
-   - Project repo URL: `https://<username>.github.io/<repo>/`
-   - User site repo (`<username>.github.io`) URL: `https://<username>.github.io/`
